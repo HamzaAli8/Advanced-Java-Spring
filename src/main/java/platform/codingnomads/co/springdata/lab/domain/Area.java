@@ -16,7 +16,7 @@ import java.io.Serializable;
 @Builder
 public class Area implements Serializable {
 
-    private static final long serialVersionUID = -8664726550453215096L;
+    private static final long serialVersionUID = 2233440979419205264L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

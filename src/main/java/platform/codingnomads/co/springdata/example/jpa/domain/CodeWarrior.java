@@ -31,7 +31,8 @@ public class CodeWarrior {
     @Builder.Default
     private List<Weapon> weapons = new ArrayList<>();
 
-    public void addWeapon(Weapon weapon) {
+    public void addWeapon(Weapon weapon){
+
         weapons.add(weapon);
         weapon.setCodeWarrior(this);
     }
