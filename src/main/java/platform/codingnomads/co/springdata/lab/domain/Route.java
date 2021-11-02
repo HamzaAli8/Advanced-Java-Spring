@@ -40,5 +40,15 @@ public class Route implements Serializable {
     )
     private Area destination;
 
+    @Builder
+    public Route(Area origin, Area destination) {
+        destination = this.destination;
+        origin = this.origin;
+        code =    (origin.getCode() + "-" + destination.getCode());
+    }
+
+
+
+
 
 }

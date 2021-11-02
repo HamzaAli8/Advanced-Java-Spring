@@ -1,13 +1,13 @@
-package platform.codingnomads.co.springdata.lab_complete;
+package platform.codingnomads.co.springdata.lab.complete;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import platform.codingnomads.co.springdata.lab_complete.domain.Area;
-import platform.codingnomads.co.springdata.lab_complete.domain.Route;
-import platform.codingnomads.co.springdata.lab_complete.repository.AreaRepository;
-import platform.codingnomads.co.springdata.lab_complete.repository.RouteRepository;
+import platform.codingnomads.co.springdata.lab.complete.domain.Area;
+import platform.codingnomads.co.springdata.lab.complete.domain.Route;
+import platform.codingnomads.co.springdata.lab.complete.repository.AreaRepository;
+import platform.codingnomads.co.springdata.lab.complete.repository.RouteRepository;
 
 import java.util.Arrays;
 import java.util.List;
@@ -27,7 +27,7 @@ public class SpringDataLab implements CommandLineRunner {
     public void run(String... args) throws Exception {
         // don't attempt to add these records again on future runs
         if (areaRepository.findAll().size() == 0) {
-            final List<Area> areas = areaRepository.saveAll(
+            final List<Area> areas = areaRepository.saveAll (
                     Arrays.asList(
                             Area.builder().code("G").build(),
                             Area.builder().code("H").build(),
@@ -37,6 +37,7 @@ public class SpringDataLab implements CommandLineRunner {
                             Area.builder().code("Z").build()
                     )
             );
+            ;
         }
         if (routeRepository.findAll().size() == 0) {
             final List<Route> routes = routeRepository.saveAll(
