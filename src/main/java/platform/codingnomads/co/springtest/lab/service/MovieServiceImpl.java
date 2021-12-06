@@ -12,11 +12,19 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MovieServiceImpl implements MovieService {
 
+
+
     @Autowired
     private MovieRepository movieRepository;
 
     @Override
     public List<Movie> getAllMovies() {
         return movieRepository.findAll();
+    }
+
+    @Override
+    public List<Movie> getAllMoviesByMinimumRating(Double rating) {
+
+        return movieRepository.findByRatingGreaterThanEqual(rating);
     }
 }

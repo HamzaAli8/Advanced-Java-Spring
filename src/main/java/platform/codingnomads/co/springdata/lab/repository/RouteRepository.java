@@ -1,7 +1,7 @@
 package platform.codingnomads.co.springdata.lab.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import platform.codingnomads.co.springdata.lab.domain.Route;
+import platform.codingnomads.co.springdata.lab.complete.domain.Route;
 
 import java.util.List;
 
