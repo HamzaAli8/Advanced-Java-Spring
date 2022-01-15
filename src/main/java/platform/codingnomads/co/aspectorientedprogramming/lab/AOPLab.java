@@ -17,7 +17,12 @@ public class AOPLab implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
-        greetingService.greeting();
+    public void run(String... args) throws Exception{
+
+        //greetingService.greeting();
+
+        //greetingService.bye();
+
+        greetingService.print();
     }
 }
